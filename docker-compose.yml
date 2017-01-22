@@ -15,3 +15,13 @@ registry:
     REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
   volumes:
     - ./data:/data
+
+jenkinsdata:
+  build: jenkins-data
+
+jenkinsmaster:
+  build: jenkins-master
+  volumes_from:
+    - jenkinsdata
+  ports:
+    - "50000:50000"
