@@ -4,7 +4,7 @@
 # https://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose
 
 FROM debian:jessie
-MAINTAINER yourname
+MAINTAINER Frederik Durant
 
 RUN useradd -d "/var/jenkins_home" -u 1000 -m -s /bin/bash jenkins
 RUN mkdir -p /var/log/jenkins
